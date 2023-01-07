@@ -12,7 +12,7 @@ const LATEX_BLOCK_REGEX = /\$\$\s*(.+?)\s*\$\$/sg;
 const LATEX_INLINE_REGEX = /\$(.+?)\$/g;
 
 function latexReplacer(isBlock) {
-    return (match, latex) => {
+    return (_, latex) => {
         return katex.renderToString(latex, { displayMode: isBlock, throwOnError: true });
     };
 }
