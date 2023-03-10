@@ -19,10 +19,8 @@ function latexReplacer(isBlock) {
 
 function buildIndex(postsDirectory, makePostUrl) {
     let postsInfo = meta.grapPostsInfo(postsDirectory);
-    for (const postInfo of postsInfo) {
-        postInfo.url = makePostUrl(postInfo.dirName);
-    }
-
+    postsInfo = postsInfo.filter(info => !info.hide);
+    postsInfo.forEach(info => info.url = makePostUrl(info.dirName));
     return indexPage(postsInfo);
 }
 

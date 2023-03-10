@@ -27,6 +27,7 @@ function loadPostInfo(postDirectory) {
     return {
         title: meta.title,
         pubDate: parseDate(meta['pub-date']),
+        hide: meta.hide,
     };
 }
 
