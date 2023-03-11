@@ -39,15 +39,20 @@ function copy(src, dst) {
 }
 
 // TODO: config
+function makePostUrl(dirName) {
+    let name = translit.transform(dirName);
+    return `/post/${name}`;
+}
+
 const POSTS_DIRECTORY = path.join(process.cwd(), 'posts');
-const POST_URL = (dirName) => `/post/${dirName}`;
 
 mkdir(OUT_DIR);
-writeTo('index.html', pageBuilder.buildIndex(POSTS_DIRECTORY, POST_URL));
+writeTo('index.html', pageBuilder.buildIndex(POSTS_DIRECTORY, makePostUrl));
 
 for (let postInfo of meta.grapPostsInfo(POSTS_DIRECTORY)) {
-    let fileName = translit.transform(postInfo.dirName);
-    writeTo(`/post/${fileName}.html`, pageBuilder.buildPost(POSTS_DIRECTORY, postInfo.dirName));
+    let file = makePostUrl(postInfo.dirName) + '.html';
+    let contents = pageBuilder.buildPost(POSTS_DIRECTORY, postInfo.dirName);
+    writeTo(file, contents);
 }
 
 copy(path.join(process.cwd(), 'static'), OUT_DIR);
