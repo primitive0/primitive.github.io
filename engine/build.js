@@ -1,5 +1,7 @@
 const fs = require('fs');
 const path = require('path');
+const CyrillicToTranslit = require('cyrillic-to-translit-js');
+const translit = new CyrillicToTranslit();
 const meta = require('./meta');
 const pageBuilder = require('./builder');
 
@@ -44,7 +46,8 @@ mkdir(OUT_DIR);
 writeTo('index.html', pageBuilder.buildIndex(POSTS_DIRECTORY, POST_URL));
 
 for (let postInfo of meta.grapPostsInfo(POSTS_DIRECTORY)) {
-    writeTo(`/post/${postInfo.dirName}.html`, pageBuilder.buildPost(POSTS_DIRECTORY, postInfo.dirName));
+    let fileName = translit.transform(postInfo.dirName);
+    writeTo(`/post/${fileName}.html`, pageBuilder.buildPost(POSTS_DIRECTORY, postInfo.dirName));
 }
 
 copy(path.join(process.cwd(), 'static'), OUT_DIR);

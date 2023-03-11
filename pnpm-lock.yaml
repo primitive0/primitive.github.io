@@ -2,11 +2,13 @@ lockfileVersion: 5.4
 
 specifiers:
   '@types/node': ^18.11.18
+  cyrillic-to-translit-js: 3.2.1
   katex: ^0.16.4
   marked: ^4.2.5
 
 devDependencies:
   '@types/node': 18.11.18
+  cyrillic-to-translit-js: 3.2.1
   katex: 0.16.4
   marked: 4.2.5
 
@@ -21,11 +23,21 @@ packages:
     engines: {node: '>= 12'}
     dev: true
 
+  /cyrillic-to-translit-js/3.2.1:
+    resolution: {integrity: sha512-HFO+fx4t9J6bfeV5DUKmkzav15ktg+6LDjODj6+CRzrFil8YuzR6wRQiDI7OxwY5q4alCEP+sNEjhdQ65TIDzw==}
+    dependencies:
+      lodash.invert: 4.3.0
+    dev: true
+
   /katex/0.16.4:
     resolution: {integrity: sha512-WudRKUj8yyBeVDI4aYMNxhx5Vhh2PjpzQw1GRu/LVGqL4m1AxwD1GcUp0IMbdJaf5zsjtj8ghP0DOQRYhroNkw==}
     hasBin: true
     dependencies:
       commander: 8.3.0
+    dev: true
+
+  /lodash.invert/4.3.0:
+    resolution: {integrity: sha512-3CJmOxN5y47rd+g5XjdZNcq2SorJkvlSqBwPomT094p6LZ4p7b5bUoRzYYMjwsTGWTW77z/dFZlCzeVQxBrZVg==}
     dev: true
 
   /marked/4.2.5:
