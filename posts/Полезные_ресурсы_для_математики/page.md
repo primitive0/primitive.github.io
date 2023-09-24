@@ -16,8 +16,9 @@
 - <a target="_blank" href="https://cosmos.msu.ru/sites/default/files/inline-files/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8%20%D1%82%D0%B5%D0%BE%D1%80%D0%B8%D1%8F%20%D0%B2%D0%B5%D1%80%D0%BE%D1%8F%D1%82%D0%BD%D0%BE%D1%81%D1%82%D0%B5%D0%B9%202019.pdf">Лекции факультета космических исследований МГУ по теории вероятностей.</a>
 
 ### Топология
-- <a target="_blank" href="http://www.pdmi.ras.ru/~olegviro/topoman/rus-book.pdf">Элементарная топология</a>
+- <a target="_blank" href="http://www.pdmi.ras.ru/~olegviro/topoman/rus-book.pdf">Элементарная топология.</a>
 
 ### Прочее
-- <a target="_blank" href="http://gorod.bogomolov-lab.ru/ps/stud/geom_ru/2122/list.html">А.Л.Городенцев. Алгебра-1.</a>
+- <a target="_blank" href="http://gorod.bogomolov-lab.ru/ps/stud/geom_ru/2122/list.html">А.Л.Городенцев. Алгебра-1. (2011)</a>
+- <a target="_blank" href="http://gorod.bogomolov-lab.ru/ps/stud/algebra-1/2324/list.html">А.Л.Городенцев. Алгебра-1. (2023)</a>
 - Сборник задач по алгебре под редакцией А. И. Кострикина.
